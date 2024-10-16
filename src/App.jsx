@@ -1,17 +1,25 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import Signin from "./components/Signin";
+import MyOrders from "./pages/MyOrders";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/orders" element={<MyOrders />} />
+          {/* <Route path="/about" element={<About />} />  
+          <Route path="/contact" element={<Contact />} />  
+          <Route path="*" element={<NotFound />} />  */}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

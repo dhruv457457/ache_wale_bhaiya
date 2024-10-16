@@ -5,6 +5,7 @@ import LogoCloud from "../components/LogoCloud";
 import Category from "../components/Category";
 import Form from "../components/Form";
 import Grids from "../components/Grids";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <Category />
       <Grids />
       <LogoCloud />
+      <Footer />
     </>
   );
 }
