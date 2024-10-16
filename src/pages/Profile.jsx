@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import Navbar from "../components/Navbar";
+
 function Profile({ initialEmail }) {
   const [email, setEmail] = useState(initialEmail);
   const [isEditing, setIsEditing] = useState(false);
@@ -24,10 +23,6 @@ function Profile({ initialEmail }) {
   };
 
   return (
-    
-    <div>
-
-      <Navbar />
     <div className="min-h-screen bg-gray-100 py-6 flex justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-5xl sm:mx-auto">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -40,7 +35,7 @@ function Profile({ initialEmail }) {
                   className="w-32 h-32 rounded-full mx-auto sm:mx-0 sm:mb-4 border-4 border-indigo-600"
                   src="https://via.placeholder.com/150"
                   alt="Profile"
-                  />
+                />
                 <h1 className="text-2xl font-semibold text-gray-900 mt-4 sm:mt-0">
                   {name}
                 </h1>
@@ -52,10 +47,10 @@ function Profile({ initialEmail }) {
                   <span className="font-semibold text-gray-900">Email:</span>
                   {isEditing ? (
                     <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="ml-2 p-1 border border-gray-300 rounded"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="ml-2 p-1 border border-gray-300 rounded"
                     />
                   ) : (
                     <span className="ml-2 text-gray-600">{email}</span>
@@ -65,10 +60,10 @@ function Profile({ initialEmail }) {
                   <span className="font-semibold text-gray-900">Phone:</span>
                   {isEditing ? (
                     <input
-                    type="text"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="ml-2 p-1 border border-gray-300 rounded"
+                      type="text"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="ml-2 p-1 border border-gray-300 rounded"
                     />
                   ) : (
                     <span className="ml-2 text-gray-600">{phone}</span>
@@ -82,8 +77,8 @@ function Profile({ initialEmail }) {
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
                       className="ml-2 p-1 border border-gray-300 rounded"
-                      />
-                    ) : (
+                    />
+                  ) : (
                     <span className="ml-2 text-gray-600">{address}</span>
                   )}
                 </div>
@@ -97,7 +92,7 @@ function Profile({ initialEmail }) {
                   <button
                     onClick={isEditing ? handleSave : handleEdit}
                     className="w-full px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-500"
-                    >
+                  >
                     {isEditing ? "Save Profile" : "Edit Profile"}
                   </button>
                 </div>
@@ -150,7 +145,7 @@ function Profile({ initialEmail }) {
                   <Link
                     to="/saved-items"
                     className="text-indigo-600 hover:underline"
-                    >
+                  >
                     View all saved items
                   </Link>
                 </div>
@@ -175,17 +170,8 @@ function Profile({ initialEmail }) {
                   <Link
                     to="/payment-methods"
                     className="text-indigo-600 hover:underline"
-                    >
+                  >
                     Manage payment methods
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-                    </div>
                   </Link>
                 </div>
               </div>
