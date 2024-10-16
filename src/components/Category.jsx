@@ -18,7 +18,7 @@ const callouts = [
       "https://m.media-amazon.com/images/I/61+zDLX-d4S._AC_UF1000,1000_QL80_.jpg",
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    href: "#",
+    href: "/Stationery",
   },
   {
     name: "Travel",
@@ -26,7 +26,7 @@ const callouts = [
     imageSrc:
       "https://ideogram.ai/assets/image/lossless/response/24PdN2EBRuG7Hcvd6TVbug",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    href: "#",
+    href: "/Projects", // Consider providing a meaningful link
   },
 ];
 
