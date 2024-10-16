@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from 'firebase/app';
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 // Firebase configuration (make sure this is correct for your project)
 const firebaseConfig = {
@@ -145,9 +146,9 @@ function Register() {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Already have an account?{' '}
-          <a href="/signin" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+          <Link to="/signin" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
             Sign in
-          </a>
+          </Link>
         </p>
       </div>
     </div>

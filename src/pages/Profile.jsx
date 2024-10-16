@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import Navbar from "../components/Navbar";
 function Profile({ initialEmail }) {
   const [email, setEmail] = useState(initialEmail);
   const [isEditing, setIsEditing] = useState(false);
@@ -15,6 +16,11 @@ function Profile({ initialEmail }) {
   const handleSave = () => {
     // Save the updated info (you can integrate this with your backend)
     setIsEditing(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn"); // Remove login status
+    navigate("/signin"); // Redirect to Signin page after logout
   };
 
   return (
@@ -82,7 +88,9 @@ function Profile({ initialEmail }) {
                   )}
                 </div>
                 <div className="flex items-center">
-                  <span className="font-semibold text-gray-900">Member since:</span>
+                  <span className="font-semibold text-gray-900">
+                    Member since:
+                  </span>
                   <span className="ml-2 text-gray-600">January 2023</span>
                 </div>
                 <div className="mt-8">
@@ -114,9 +122,12 @@ function Profile({ initialEmail }) {
                   </li>
                 </ul>
                 <div className="text-right mt-2">
-                  <a href="/orders" className="text-indigo-600 hover:underline">
+                  <Link
+                    to="/orders"
+                    className="text-indigo-600 hover:underline"
+                  >
                     View all orders
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -136,12 +147,12 @@ function Profile({ initialEmail }) {
                   </li>
                 </ul>
                 <div className="text-right mt-2">
-                  <a
-                    href="/saved-items"
+                  <Link
+                    to="/saved-items"
                     className="text-indigo-600 hover:underline"
                     >
                     View all saved items
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -161,8 +172,8 @@ function Profile({ initialEmail }) {
                   </li>
                 </ul>
                 <div className="text-right mt-2">
-                  <a
-                    href="/payment-methods"
+                  <Link
+                    to="/payment-methods"
                     className="text-indigo-600 hover:underline"
                     >
                     Manage payment methods
@@ -175,6 +186,14 @@ function Profile({ initialEmail }) {
       </div>
     </div>
                     </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from 'firebase/app';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate, Link } from 'react-router-dom'; // Import useNavigate and Link
 
 // Firebase configuration (make sure this is correct for your project)
 const firebaseConfig = {
@@ -100,9 +100,9 @@ function Signin() {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                  <Link to="/forgot-password" className="font-semibold text-indigo-600 hover:text-indigo-500">
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="mt-2">
@@ -137,9 +137,9 @@ function Signin() {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{' '}
-            <a href="/register" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+            <Link to="/register" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
               Register
-            </a>
+            </Link>
           </p>
         </div>
       </div>

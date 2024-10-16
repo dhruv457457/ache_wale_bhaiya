@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Header() {
   return (
@@ -83,12 +84,12 @@ function Header() {
                 </div>
               </div>
 
-              <a
-                href="#"
-                className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
-              >
-                Shop Collection
-              </a>
+              {/* Correct usage of Link component */}
+              <Link to="/category"> {/* Link to the shop page */}
+                <span className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">
+                  Shop Collection
+                </span>
+              </Link>
             </div>
           </div>
         </div>
