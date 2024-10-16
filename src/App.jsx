@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Signin from "./components/Signin";
 import MyOrders from "./pages/MyOrders";
+import Product from "./components/Product";
+
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/orders" element={<MyOrders />} />
+          <Route path="/product" element={<Product />} />
           <Route path="/orders" element={<MyOrders />} />
           {/* <Route path="/about" element={<About />} />  
           <Route path="/contact" element={<Contact />} />  
