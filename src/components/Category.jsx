@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+
 const callouts = [
   {
     name: "Desk and Office",
@@ -7,7 +9,7 @@ const callouts = [
       "https://ideogram.ai/assets/image/lossless/response/_ATiY3KLSSmRAn24wb6iww",
     imageAlt:
       "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    href: "/Product",
+    href: "/Product", // Ensure the href matches your route
   },
   {
     name: "Self-Improvement",
@@ -27,6 +29,7 @@ const callouts = [
     href: "#",
   },
 ];
+
 function Category() {
   return (
     <div className="bg-gray-100">
@@ -45,10 +48,10 @@ function Category() {
                   />
                 </div>
                 <h3 className="mt-6 text-sm text-gray-500">
-                  <a href={callout.href}>
+                  <Link to={callout.href}> {/* Use Link instead of a */}
                     <span className="absolute inset-0" />
                     {callout.name}
-                  </a>
+                  </Link>
                 </h3>
                 <p className="text-base font-semibold text-gray-900">
                   {callout.description}
