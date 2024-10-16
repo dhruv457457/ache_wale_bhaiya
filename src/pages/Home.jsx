@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import LogoCloud from "../components/LogoCloud";
 import Category from "../components/Category";
-import Form from "../components/Form";
 import Grids from "../components/Grids";
 import Footer from "../components/Footer";
 

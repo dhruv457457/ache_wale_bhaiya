@@ -88,20 +88,12 @@ function Grids() {
                 </p>
               </div>
               <div className="relative min-h-[30rem] w-full grow">
-                <div className="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-blue-900 shadow-2xl">
-                  <div className="flex bg-gray-800/40 ring-1 ring-white/5">
-                    <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
-                      <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                        NotificationSetting.jsx
-                      </div>
-                      <div className="border-r border-gray-600/10 px-4 py-2">
-                        App.jsx
-                      </div>
-                    </div>
-                  </div>
-                  <div className="px-6 pb-14 pt-6">
-                    {/* Your code example */}
-                  </div>
+                <div className="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl ">
+                <img
+                    className="size-full object-cover object-top"
+                    src="https://ideogram.ai/assets/progressive-image/balanced/response/2L4gaa7MT8e0DGXHjs7A5w"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
