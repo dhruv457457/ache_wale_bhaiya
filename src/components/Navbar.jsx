@@ -1,15 +1,16 @@
-import { Disclosure, Menu } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, Menu } from '@headlessui/react';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom'; // Import Link
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Category', href: '/category', current: false },
   { name: 'Sign in', href: '/signin', current: false },
   { name: 'My Orders', href: '/orders', current: false },
-]
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
@@ -37,9 +38,9 @@ export default function Navbar() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link // Use Link instead of a
                     key={item.name}
-                    href={item.href}
+                    to={item.href} // Change href to to
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
@@ -47,7 +48,7 @@ export default function Navbar() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -81,21 +82,30 @@ export default function Navbar() {
               >
                 <Menu.Item>
                   {({ active }) => (
-                    <a href="/profile" className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}>
+                    <Link // Use Link instead of a
+                      to="/profile" // Change href to to
+                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                    >
                       Your Profile
-                    </a>
+                    </Link>
                   )}
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <a href="#" className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}>
+                    <a // Keeping this as an anchor since it's not a routing path
+                      href="#"
+                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                    >
                       Settings
                     </a>
                   )}
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <a href="#" className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}>
+                    <a // Keeping this as an anchor since it's not a routing path
+                      href="#"
+                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                    >
                       Sign out
                     </a>
                   )}
@@ -111,8 +121,8 @@ export default function Navbar() {
           {navigation.map((item) => (
             <Disclosure.Button
               key={item.name}
-              as="a"
-              href={item.href}
+              as={Link} // Use Link instead of a
+              to={item.href} // Change href to to
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
                 item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
@@ -125,5 +135,5 @@ export default function Navbar() {
         </div>
       </Disclosure.Panel>
     </Disclosure>
-  )
+  );
 }
