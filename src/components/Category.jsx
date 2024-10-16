@@ -13,7 +13,7 @@ const callouts = [
     name: "Self-Improvement",
     description: "Journals and note-taking",
     imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-02.jpg",
+      "https://m.media-amazon.com/images/I/61+zDLX-d4S._AC_UF1000,1000_QL80_.jpg",
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
     href: "#",
@@ -22,7 +22,7 @@ const callouts = [
     name: "Travel",
     description: "Daily commute essentials",
     imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg",
+      "https://ideogram.ai/assets/image/lossless/response/24PdN2EBRuG7Hcvd6TVbug",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
     href: "#",
   },
