@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
-import { Disclosure, Menu } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom'; // Import Link
+import React from "react";
+import { Disclosure, Menu } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom"; // Import Link
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Category', href: '/category', current: false },
-  { name: 'Sign in', href: '/signin', current: false },
-  { name: 'My Orders', href: '/orders', current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "Category", href: "/category", current: false },
+  { name: "Sign in", href: "/signin", current: false },
+  { name: "My Orders", href: "/orders", current: false },
+  { name: "Sell Your Product", href: "https://forms.gle/CNvJxYkLSSj3VnqR7", current: false }, // New navigation item
 ];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
@@ -43,13 +44,15 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    aria-current={item.current ? 'page' : undefined}
+                    aria-current={item.current ? "page" : undefined}
                     className={classNames(
                       item.current
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium'
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "rounded-md px-3 py-2 text-sm font-medium"
                     )}
+                    target={item.name === "Sell Your Product" ? "_blank" : "_self"} // Open in new tab if it's the Google Form
+                    rel={item.name === "Sell Your Product" ? "noopener noreferrer" : undefined} // Security for new tab
                   >
                     {item.name}
                   </Link>
@@ -86,8 +89,8 @@ export default function Navbar() {
                     <Link
                       to="/profile"
                       className={classNames(
-                        active ? 'bg-gray-100' : '',
-                        'block px-4 py-2 text-sm text-gray-700'
+                        active ? "bg-gray-100" : "",
+                        "block px-4 py-2 text-sm text-gray-700"
                       )}
                     >
                       Your Profile
@@ -99,8 +102,8 @@ export default function Navbar() {
                     <a
                       href="#"
                       className={classNames(
-                        active ? 'bg-gray-100' : '',
-                        'block px-4 py-2 text-sm text-gray-700'
+                        active ? "bg-gray-100" : "",
+                        "block px-4 py-2 text-sm text-gray-700"
                       )}
                     >
                       Settings
@@ -112,8 +115,8 @@ export default function Navbar() {
                     <a
                       href="#"
                       className={classNames(
-                        active ? 'bg-gray-100' : '',
-                        'block px-4 py-2 text-sm text-gray-700'
+                        active ? "bg-gray-100" : "",
+                        "block px-4 py-2 text-sm text-gray-700"
                       )}
                     >
                       Sign out
@@ -133,12 +136,12 @@ export default function Navbar() {
               key={item.name}
               as={Link}
               to={item.href}
-              aria-current={item.current ? 'page' : undefined}
+              aria-current={item.current ? "page" : undefined}
               className={classNames(
                 item.current
-                  ? 'bg-gray-900 text-white'
-                  : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium'
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                "block rounded-md px-3 py-2 text-base font-medium"
               )}
             >
               {item.name}
