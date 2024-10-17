@@ -31,17 +31,17 @@ function LogoCloud() {
           />
           <img
             alt="SavvyCal"
-            src="https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg"
+            src="https://i.ibb.co/QMpbHbK/Whats-App-Image-2024-10-15-at-9-43-52-PM-1-removebg-preview.png"
             width={158}
             height={88}
-            className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+            className="col-span-2 max-h-27 w-full object-contain sm:col-start-2 lg:col-span-1"
           />
           <img
             alt="Statamic"
-            src="https://i.ibb.co/Fwj6PdH/Whats-App-Image-2024-10-16-at-4-30-14-PM-1.png"
+            src="https://i.ibb.co/QcBYdkP/Whats-App-Image-2024-10-16-at-4-30-14-PM.jpg"
             width={108}
-            height={108}
-            className="col-span-2 col-start-2 max-h-17 w-full object-contain sm:col-start-auto lg:col-span-1"
+            height={88}
+            className="col-span-2 max-h-27 w-full object-contain sm:col-start-2 lg:col-span-1"
           />
         </div>
       </div>
