@@ -1,28 +1,21 @@
-import React, { useState } from 'react';
-
-import { Disclosure, Menu } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom'; // Import Link
+import React from "react";
+import { Disclosure, Menu } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom"; // Import Link
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Category', href: '/category', current: false },
-  { name: 'Sign in', href: '/signin', current: false },
-  { name: 'My Orders', href: '/orders', current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "Category", href: "/category", current: false },
+  { name: "Sign in", href: "/signin", current: false },
+  { name: "My Orders", href: "/orders", current: false },
+  { name: "Sell Your Product", href: "https://forms.gle/CNvJxYkLSSj3VnqR7", current: false }, // New navigation item
 ];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
-  const [query, setQuery] = useState('')
-
-  const handleSearch = (e) => {
-    e.preventDefault()
-    console.log('Search query:', query) // Replace with actual search logic
-  }
-
   return (
     <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -37,40 +30,35 @@ export default function Navbar() {
             </Disclosure.Button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
+            <div className="flex items-center">
               <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                alt="TechBazaar"
+                src="https://i.ibb.co/rFzSmGG/Black-and-White-Minimalist-Wedding-Monogram-Logo-removebg-preview.png"
                 className="h-8 w-auto"
               />
+              <span className="ml-2 text-white text-xl font-semibold">TechBazaar</span>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <Link // Use Link instead of a
+                  <Link
                     key={item.name}
-                    to={item.href} // Change href to to
-                    aria-current={item.current ? 'page' : undefined}
+                    to={item.href}
+                    aria-current={item.current ? "page" : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium',
+                      item.current
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "rounded-md px-3 py-2 text-sm font-medium"
                     )}
+                    target={item.name === "Sell Your Product" ? "_blank" : "_self"} // Open in new tab if it's the Google Form
+                    rel={item.name === "Sell Your Product" ? "noopener noreferrer" : undefined} // Security for new tab
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
             </div>
-            {/* Search input for desktop */}
-            <form onSubmit={handleSearch} className="hidden sm:block sm:ml-4">
-              <input
-                type="text"
-                placeholder="Search..."
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                className="rounded-md px-3 py-2 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-              />
-            </form>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
@@ -95,14 +83,15 @@ export default function Navbar() {
                   />
                 </Menu.Button>
               </div>
-              <Menu.Items
-                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              >
+              <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <Menu.Item>
                   {({ active }) => (
-                    <Link // Use Link instead of a
-                      to="/profile" // Change href to to
-                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                    <Link
+                      to="/profile"
+                      className={classNames(
+                        active ? "bg-gray-100" : "",
+                        "block px-4 py-2 text-sm text-gray-700"
+                      )}
                     >
                       Your Profile
                     </Link>
@@ -110,9 +99,12 @@ export default function Navbar() {
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <a // Keeping this as an anchor since it's not a routing path
+                    <a
                       href="#"
-                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                      className={classNames(
+                        active ? "bg-gray-100" : "",
+                        "block px-4 py-2 text-sm text-gray-700"
+                      )}
                     >
                       Settings
                     </a>
@@ -120,9 +112,12 @@ export default function Navbar() {
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <a // Keeping this as an anchor since it's not a routing path
+                    <a
                       href="#"
-                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                      className={classNames(
+                        active ? "bg-gray-100" : "",
+                        "block px-4 py-2 text-sm text-gray-700"
+                      )}
                     >
                       Sign out
                     </a>
@@ -139,27 +134,19 @@ export default function Navbar() {
           {navigation.map((item) => (
             <Disclosure.Button
               key={item.name}
-              as={Link} // Use Link instead of a
-              to={item.href} // Change href to to
-              aria-current={item.current ? 'page' : undefined}
+              as={Link}
+              to={item.href}
+              aria-current={item.current ? "page" : undefined}
               className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
+                item.current
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                "block rounded-md px-3 py-2 text-base font-medium"
               )}
             >
               {item.name}
             </Disclosure.Button>
           ))}
-          {/* Search input for mobile */}
-          <form onSubmit={handleSearch} className="mt-2">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="w-full rounded-md px-3 py-2 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            />
-          </form>
         </div>
       </Disclosure.Panel>
     </Disclosure>
