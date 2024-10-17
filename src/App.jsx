@@ -10,6 +10,7 @@ import Stationery from "./components/Stationery";
 import Category from "./components/Category";
 import Profile from "./pages/Profile";
 import Register from "./components/Register";
+import Productdetails from "./components/productdetails";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/category" element={<Category />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/pro" element={<Productdetails />} />
         </Routes>
       </div>
     </Router>

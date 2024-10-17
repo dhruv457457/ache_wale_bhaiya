@@ -9,7 +9,7 @@ const products = [
     name: "Male Jumper Wires",
     category: "Electronics",
     href: "/products/jumper-wires",
-    price: "Rs.50",
+    price: "50",
     imageSrc:
       "https://cdn.littlebird.com.au/images/files/000/056/706/large/SF-PRT-11709.jpg?1535768036",
     imageAlt: "Male jumper wires.",
@@ -19,7 +19,7 @@ const products = [
     name: "Female Jumper Wires",
     category: "Electronics",
     href: "/products/jumper-wires",
-    price: "Rs.50",
+    price: "50",
     imageSrc:
       "https://cdn.littlebird.com.au/images/files/000/056/706/large/SF-PRT-11709.jpg?1535768036",
     imageAlt: "Female jumper wires.",
@@ -29,7 +29,7 @@ const products = [
     name: "Motor",
     category: "Motors",
     href: "/products/motor",
-    price: "Rs.500",
+    price: "500",
     imageSrc:
       "https://images-cdn.ubuy.co.in/643d3af09995cb379d77cae1-6v-60rpm-micro-dc-gear-speed-reduction.jpg",
     imageAlt: "DC motor.",
@@ -39,7 +39,7 @@ const products = [
     name: "Focus Paper Refill",
     category: "Stationery",
     href: "/products/focus-paper-refill",
-    price: "$89",
+    price: "89",
     imageSrc:
       "https://m.media-amazon.com/images/I/61bkyBbnBPL._AC_UF1000,1000_QL80_.jpg",
     imageAlt: "Focus paper refill.",
@@ -49,7 +49,7 @@ const products = [
     name: "Machined Mechanical Pencil",
     category: "Stationery",
     href: "/products/machined-mechanical-pencil",
-    price: "$35",
+    price: "35",
     imageSrc:
       "https://harishprojects.com/cdn/shop/files/10-Core-Ribbon-Wire-Harish-Projects.webp?v=1718122135",
     imageAlt: "Mechanical pencil with brass tip.",
@@ -59,7 +59,7 @@ const products = [
     name: "Earthen Bottle",
     category: "Lifestyle",
     href: "/products/earthen-bottle",
-    price: "$48",
+    price: "48",
     imageSrc:
       "https://images-eu.ssl-images-amazon.com/images/I/51xA613taAL.AC_UL600_SR600,600.jpg",
     imageAlt: "Earthen bottle with cork stopper.",
@@ -69,7 +69,7 @@ const products = [
     name: "Nomad Tumbler",
     category: "Lifestyle",
     href: "/products/nomad-tumbler",
-    price: "$35",
+    price: "35",
     imageSrc:
       "https://robu.in/wp-content/uploads/2015/10/pulley-wheel-1-500x5001.jpg",
     imageAlt: "Insulated tumbler.",
@@ -79,7 +79,7 @@ const products = [
     name: "Focus Paper Refill (Pack of 2)",
     category: "Stationery",
     href: "/products/focus-paper-refill-2",
-    price: "$89",
+    price: "89",
     imageSrc: "https://m.media-amazon.com/images/I/51SGZaQY5dL.jpg",
     imageAlt: "Pack of Focus paper refills.",
   },
@@ -88,7 +88,7 @@ const products = [
     name: "Machined Mechanical Pencil (Variant)",
     category: "Stationery",
     href: "/products/machined-mechanical-pencil-2",
-    price: "$35",
+    price: "35",
     imageSrc:
       "https://probots.co.in/pub/media/catalog/product/cache/dae07e5368c25ed1643ed23ff1b30de1/p/r/promaxrockerswitchdpdtkcd4.jpg",
     imageAlt: "Another variant of mechanical pencil.",
@@ -98,7 +98,7 @@ const products = [
     name: "Jumper Wires",
     category: "Electronics",
     href: "/products/jumper-wires-2",
-    price: "Rs.50",
+    price: "50",
     imageSrc:
       "https://5.imimg.com/data5/SELLER/Default/2020/9/VY/DW/OA/69897210/steel-curtain-pipe-rod.jpg",
     imageAlt: "Another set of jumper wires.",
@@ -108,7 +108,7 @@ const products = [
     name: "Motor (Variant)",
     category: "Motors",
     href: "/products/motor-2",
-    price: "Rs.500",
+    price: "500",
     imageSrc:
       "https://m.media-amazon.com/images/I/61nQOfGrXYL._AC_UF894,1000_QL80_.jpg",
     imageAlt: "Another variant of motor.",
@@ -118,13 +118,12 @@ const products = [
     name: "Focus Paper Refill (Special Edition)",
     category: "Stationery",
     href: "/products/focus-paper-refill-3",
-    price: "$89",
+    price: "89",
     imageSrc:
       "https://m.media-amazon.com/images/I/61c9DWyge1L._AC_UF1000,1000_QL80_.jpg",
     imageAlt: "Special edition of paper refill.",
   },
 ];
-
 
 function Stationery() {
   const [selectedCategory, setSelectedCategory] = useState("All");
