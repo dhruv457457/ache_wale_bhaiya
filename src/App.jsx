@@ -11,6 +11,7 @@ import Profile from "./pages/Profile";
 import Register from "./components/Register";
 import AdminPanel from "./components/AdminPanel";
 import ProductDetails from "./components/Productdetails"; // Ensure the path is correct
+import ProductDescrip from "./components/ProductDescrip";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/orders" element={<MyOrders />} />
           <Route path="/stationery" element={<Stationery />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<ProductDescrip />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/category" element={<Category />} />
           <Route path="/profile" element={<Profile />} />
