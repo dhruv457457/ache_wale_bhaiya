@@ -1,4 +1,3 @@
-// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -11,7 +10,7 @@ import Category from "./components/Category";
 import Profile from "./pages/Profile";
 import Register from "./components/Register";
 import AdminPanel from "./components/AdminPanel";
-import ProductDetails from "./components/Productdetails";
+import ProductDetails from "./components/Productdetails"; // Ensure the path is correct
 
 const App = () => {
   return (
@@ -21,13 +20,13 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/orders" element={<MyOrders />} />
-          <Route path="/Stationery" element={<Stationery />} />
+          <Route path="/stationery" element={<Stationery />} />
           <Route path="/product" element={<Product />} />
-          <Route path="/Projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/category" element={<Category />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/pro-deatils" element={<ProductDetails />} />
+          <Route path="/product/:productId" element={<ProductDetails />} />
           <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </div>

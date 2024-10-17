@@ -14,15 +14,14 @@ function Product() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "product")); // Ensure this matches the AdminPanel
+        const querySnapshot = await getDocs(collection(db, "product"));
         const productsData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
-          // Ensure these keys match your Firestore structure
-          imageSrc: doc.data().images[0]?.src || '', // Access the first image URL
-          imageAlt: doc.data().images[0]?.alt || 'Product Image', // Access the first image alt text
+          imageSrc: doc.data().images[0]?.src || '',
+          imageAlt: doc.data().images[0]?.alt || 'Product Image',
         }));
-        console.log(productsData); // Log to check the data
+        console.log(productsData);
         setProducts(productsData);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -71,7 +70,7 @@ function Product() {
               filteredProducts.map((product) => (
                 <Link
                   key={product.id}
-                  to={product.href}
+                  to={`/product/${product.id}`} // Updated path to include product ID
                   className="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
                 >
                   <img
