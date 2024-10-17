@@ -1,5 +1,5 @@
 // ProductDescrip.js
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 
@@ -14,6 +14,16 @@ function ProductDescrip() {
   // Use default values if product data is missing
   const rating = product?.rating || defaultRating;
   const ratingCount = product?.ratingCount || defaultRatingCount;
+
+  // State for showing seller contact details
+  const [showSellerDetails, setShowSellerDetails] = useState(false);
+
+  // Example seller information
+  const sellerDetails = {
+    name: "AcheWaleBhaiya",
+    phone: "+91 67234679",
+    email: "ache_wale_bhaiya@gmail.com",
+  };
 
   if (!product) {
     return <div>Product not found.</div>;
@@ -60,11 +70,21 @@ function ProductDescrip() {
                 <li>Features: {product.features ? product.features.join(', ') : "N/A"}</li> {/* Added specification */}
               </ul>
               <button
-                onClick={() => alert("Contacting seller...")} // Placeholder for contact action
+                onClick={() => setShowSellerDetails(!showSellerDetails)} // Toggle seller details
                 className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mb-4"
               >
-                Contact Seller
+                {showSellerDetails ? "Hide Seller Details" : "Contact Seller"}
               </button>
+
+              {/* Seller Details Section */}
+              {showSellerDetails && (
+                <div className="mt-4 p-4 border rounded-md border-gray-300 bg-gray-100">
+                  <h4 className="font-semibold text-gray-800">Seller Details:</h4>
+                  <p><strong>Name:</strong> {sellerDetails.name}</p>
+                  <p><strong>Phone:</strong> {sellerDetails.phone}</p>
+                  <p><strong>Email:</strong> {sellerDetails.email}</p>
+                </div>
+              )}
             </div>
 
             {/* Action Buttons on Right */}
