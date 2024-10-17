@@ -11,6 +11,7 @@ import Category from "./components/Category";
 import Profile from "./pages/Profile";
 import Register from "./components/Register";
 import Productdetails from "./components/productdetails";
+import AdminPanel from "./components/AdminPanel";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/register" element={<Register />} />
           <Route path="/pro" element={<Productdetails />} />
+          <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </div>
     </Router>
