@@ -26,7 +26,6 @@ function Header() {
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              {/* Only animate the fest name */}
               <div
                 className={`transition-opacity duration-500 ${
                   fade ? "opacity-100" : "opacity-0"
@@ -55,20 +54,20 @@ function Header() {
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       {/* Clickable and hover effect on images */}
                       <Link to="/category">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                           <img
                             alt=""
                             src="https://ideogram.ai/assets/image/lossless/response/zwY8uw6FSwS7aPU5WdzBvQ"
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center transition-transform duration-300"
                           />
                         </div>
                       </Link>
                       <Link to="/category">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                           <img
                             alt=""
                             src="https://ideogram.ai/assets/image/lossless/response/TkKQ4ZsdQJqbKflTHFZaOg"
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center transition-transform duration-300"
                           />
                         </div>
                       </Link>
@@ -76,29 +75,29 @@ function Header() {
 
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <Link to="/category">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                           <img
                             alt=""
                             src="https://ideogram.ai/assets/image/lossless/response/xPjOgNMZSfKFKWkqIzedAA"
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center transition-transform duration-300"
                           />
                         </div>
                       </Link>
                       <Link to="/category">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                           <img
                             alt=""
                             src="https://ideogram.ai/assets/progressive-image/balanced/response/_-Vf9kqjR1uMznxKU5zxRQ"
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center transition-transform duration-300"
                           />
                         </div>
                       </Link>
                       <Link to="/category">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                           <img
                             alt=""
                             src="https://ideogram.ai/assets/progressive-image/balanced/response/2yvxjWHnR-iaBZdljr1V3g"
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center transition-transform duration-300"
                           />
                         </div>
                       </Link>
@@ -106,20 +105,20 @@ function Header() {
 
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <Link to="/category">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                           <img
                             alt=""
                             src="https://ideogram.ai/assets/progressive-image/balanced/response/BuyJDCf2SxOKaAi0JMM2Ug"
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center transition-transform duration-300"
                           />
                         </div>
                       </Link>
                       <Link to="/category">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                           <img
                             alt=""
                             src="https://ideogram.ai/assets/progressive-image/balanced/response/hs_E43FVTye7TcbHd_4P6A"
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center transition-transform duration-300"
                           />
                         </div>
                       </Link>
