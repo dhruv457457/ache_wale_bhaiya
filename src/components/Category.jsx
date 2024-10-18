@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import Navbar from "./Navbar";
 
 const callouts = [
   {
@@ -32,6 +33,8 @@ const callouts = [
 
 function Category() {
   return (
+    <>
+    <Navbar/>
     <div className="bg-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
@@ -62,6 +65,7 @@ function Category() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

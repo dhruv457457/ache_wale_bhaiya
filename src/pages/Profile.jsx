@@ -1,10 +1,12 @@
 
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import React, { useEffect, useState } from 'react';
 import { getAuth } from "firebase/auth";
 import { initializeApp } from 'firebase/app';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 // Firebase configuration
 const firebaseConfig = {
@@ -48,6 +50,8 @@ function Profile() {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12">
     <div className="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
       <div className="mb-6">
@@ -157,6 +161,7 @@ function Profile() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

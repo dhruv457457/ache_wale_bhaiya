@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from 'firebase/app';
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import Navbar from "./Navbar";
 
 // Firebase configuration (make sure this is correct for your project)
 const firebaseConfig = {
@@ -44,6 +45,8 @@ function Register() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
@@ -152,6 +155,7 @@ function Register() {
         </p>
       </div>
     </div>
+    </>
   );
 }
 
