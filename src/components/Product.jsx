@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import { db } from "../services/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-const categories = ["Wires", "Motors", "Stationery", "Others"];
+const categories = ["Wires", "Motors", "Others"];
 
 function Product() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -92,20 +92,22 @@ function Product() {
               {filteredProducts.length > 0 ? (
                 filteredProducts.map((product) => (
                   <Link
-                    key={product.id}
-                    to={`/product/${product.id}`}
-                    className="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
+                  key={product.id}
+                  to={`/product/${product.id}`}
+                  state={{ product }} // Pass the entire product object as state
+                  className="group block bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
                   >
-                    <img
-                      src={product.imageSrc}
-                      alt={product.imageAlt}
-                      className="h-48 w-full object-cover group-hover:opacity-75"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-sm font-medium text-gray-800">{product.name}</h3>
-                      <p className="mt-1 text-lg font-semibold text-gray-900">Rs. {product.price}</p>
-                    </div>
-                  </Link>
+                  <img
+                  src={product.imageSrc}
+                  alt={product.imageAlt}
+    className="h-48 w-full object-cover group-hover:opacity-75"
+  />
+  <div className="p-4">
+    <h3 className="text-sm font-medium text-gray-800">{product.name}</h3>
+    <p className="mt-1 text-lg font-semibold text-gray-900">Rs. {product.price}</p>
+  </div>
+</Link>
+
                 ))
               ) : (
                 <p>No products available in this category.</p>

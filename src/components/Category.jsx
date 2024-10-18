@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const callouts = [
   {
-    name: "Desk and Office",
-    description: "Work from home accessories",
+    name: "Fest Accessories",
+    description: "Tech Essentials",
     imageSrc:
       "https://ideogram.ai/assets/image/lossless/response/_ATiY3KLSSmRAn24wb6iww",
     imageAlt:
@@ -12,8 +12,8 @@ const callouts = [
     href: "/Product", // Ensure the href matches your route
   },
   {
-    name: "Self-Improvement",
-    description: "Journals and note-taking",
+    name: "Drafter, Sheet-Holder,...",
+    description: "Stationary and tools",
     imageSrc:
       "https://m.media-amazon.com/images/I/61+zDLX-d4S._AC_UF1000,1000_QL80_.jpg",
     imageAlt:
@@ -21,8 +21,8 @@ const callouts = [
     href: "/Stationery",
   },
   {
-    name: "Travel",
-    description: "Daily commute essentials",
+    name: "According to Project in Adhaar",
+    description: "All tech or non-tech essentials",
     imageSrc:
       "https://ideogram.ai/assets/image/lossless/response/24PdN2EBRuG7Hcvd6TVbug",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",

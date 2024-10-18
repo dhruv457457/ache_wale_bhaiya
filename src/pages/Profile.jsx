@@ -122,12 +122,12 @@ function Profile() {
           <h2 className="text-lg font-semibold">Order History</h2>
           <ul className="mt-4 space-y-2">
             <li className="flex justify-between border-b pb-2">
-              <span>Order #12345</span>
-              <span>$120.00</span>
+              <span>500 RPM center-shaft DC gear motor</span>
+              <span>Rs.130.00</span>
             </li>
             <li className="flex justify-between border-b pb-2">
-              <span>Order #12346</span>
-              <span>$200.00</span>
+              <span>Rainbow 10 Core Color Flat Ribbon Wire Cable</span>
+              <span>Rs. 30.00</span>
             </li>
           </ul>
           <div className="mt-2 text-right">
@@ -141,11 +141,11 @@ function Profile() {
           <h2 className="text-lg font-semibold">Payment Methods</h2>
           <ul className="mt-4 space-y-2">
             <li className="flex justify-between border-b pb-2">
-              <span>Visa ending in 1234</span>
+              <span>DebitCard</span>
               <span>Exp: 12/25</span>
             </li>
             <li className="flex justify-between border-b pb-2">
-              <span>Mastercard ending in 5678</span>
+              <span>Mastercard</span>
               <span>Exp: 05/24</span>
             </li>
           </ul>
