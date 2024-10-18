@@ -48,8 +48,8 @@ function Register() {
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           alt="Your Company"
-          src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-          className="mx-auto h-10 w-auto"
+          src="https://i.ibb.co/rFzSmGG/Black-and-White-Minimalist-Wedding-Monogram-Logo-removebg-preview.png"
+          className="mx-auto h-16 w-16"
         />
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
           Create your account
