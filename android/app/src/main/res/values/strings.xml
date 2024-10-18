@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ache Wale Bhaiya</string>
+    <string name="title_activity_main">Ache Wale Bhaiya</string>
+    <string name="package_name">com.techbazaar.app</string>
+    <string name="custom_url_scheme">com.techbazaar.app</string>
+</resources>
