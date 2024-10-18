@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"; // Import Link
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "Category", href: "/category", current: false },
   { name: "Sign in", href: "/signin", current: false },
   { name: "My Orders", href: "/orders", current: false },
   { name: "Sell Your Product", href: "https://forms.gle/CNvJxYkLSSj3VnqR7", current: false }, // New navigation item

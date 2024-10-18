@@ -64,27 +64,27 @@ function Product() {
         </div>
 
         <div className="flex">
-          {/* Sidebar Filter */}
-          <div className="w-1/6 p-4 bg-gray-100 border-r">
-            <h2 className="text-lg font-semibold mb-4">Filter by Category</h2>
-            <ul>
-              <li
-                className={`cursor-pointer p-2 ${selectedCategory === "All" ? "font-bold" : ""}`}
-                onClick={() => setSelectedCategory("All")}
-              >
-                All
-              </li>
-              {categories.map((category) => (
-                <li
-                  key={category}
-                  className={`cursor-pointer p-2 ${selectedCategory === category ? "font-bold" : ""}`}
-                  onClick={() => setSelectedCategory(category)}
-                >
-                  {category}
-                </li>
-              ))}
-            </ul>
-          </div>
+  {/* Sidebar Filter */}
+  <div className="hidden lg:block w-1/6 p-4 bg-gray-100 border-r">
+    <h2 className="text-lg font-semibold mb-4">Filter by Category</h2>
+    <ul>
+      <li
+        className={`cursor-pointer p-2 ${selectedCategory === "All" ? "font-bold" : ""}`}
+        onClick={() => setSelectedCategory("All")}
+      >
+        All
+      </li>
+      {categories.map((category) => (
+        <li
+          key={category}
+          className={`cursor-pointer p-2 ${selectedCategory === category ? "font-bold" : ""}`}
+          onClick={() => setSelectedCategory(category)}
+        >
+          {category}
+        </li>
+      ))}
+    </ul>
+  </div>
 
           {/* Products Grid */}
           <div className="flex-1 bg-white p-8">
