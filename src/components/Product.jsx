@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import { db } from "../services/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-const categories = ["Wires", "Motors", "Stationery", "Others"];
+const categories = ["Wires", "Motors", "Others"];
 
 function Product() {
   const [selectedCategory, setSelectedCategory] = useState("All");
