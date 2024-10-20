@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
 import { useNavigate, Link } from 'react-router-dom'; // Import useNavigate and Link
 import Navbar from "./Navbar";
+
 // Firebase configuration (make sure this is correct for your project)
 const firebaseConfig = {
   apiKey: "AIzaSyCOEELr8MeueOSS1WyJX5_CkjCBMU1CjuU",
@@ -17,6 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 
 function Signin() {
   const [email, setEmail] = useState('');
@@ -24,7 +26,7 @@ function Signin() {
   const [error, setError] = useState(null);
   const navigate = useNavigate(); // Initialize navigate
 
-  // Handle form submission
+  // Handle email/password sign-in form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError(null); // Clear any previous errors
@@ -32,13 +34,8 @@ function Signin() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("Successfully signed in!", userCredential);
-
-      // Show a success message in an alert
       alert("Successfully signed in!");
-
-      // Redirect to the profile section after successful sign-in
-      navigate('/profile'); // Change '/profile' to your profile route
-
+      navigate('/profile'); // Redirect to the profile section after successful sign-in
     } catch (error) {
       console.error("Error signing in:", error.code, error.message);
 
@@ -60,9 +57,22 @@ function Signin() {
     }
   };
 
+  // Handle Google sign-in
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log('Google sign-in success:', result);
+      alert('Successfully signed in with Google!');
+      navigate('/profile');
+    } catch (error) {
+      console.error('Error with Google sign-in:', error);
+      setError('Google sign-in failed: ' + error.message);
+    }
+  };
+
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
@@ -135,6 +145,21 @@ function Signin() {
               </button>
             </div>
           </form>
+
+          <div className="relative my-6">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-300"></div>
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="bg-white px-2 text-gray-500">Or sign in with</span>
+            </div>
+          </div>
+
+          {/* Google Sign-In Button */}
+          <button onClick={handleGoogleSignIn}  className="flex items-center justify-center w-full rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-700 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" className="h-5 w-5 mr-3" />
+          Sign in with Google
+          </button>
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{' '}
