@@ -3,6 +3,7 @@ import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvide
 import { initializeApp } from 'firebase/app';
 import { useNavigate, Link } from 'react-router-dom'; // Import useNavigate and Link
 import Navbar from "./Navbar";
+import { FcGoogle } from "react-icons/fc";
 
 // Firebase configuration (make sure this is correct for your project)
 const firebaseConfig = {
@@ -156,8 +157,8 @@ function Signin() {
           </div>
 
           {/* Google Sign-In Button */}
-          <button onClick={handleGoogleSignIn}  className="flex items-center justify-center w-full rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-700 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-          <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" className="h-5 w-5 mr-3" />
+          <button onClick={handleGoogleSignIn} className="flex items-center justify-center w-full rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-700 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          <FcGoogle className="h-5 w-5 mr-3" /> {/* Google Icon */}
           Sign in with Google
           </button>
 
