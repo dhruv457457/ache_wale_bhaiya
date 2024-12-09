@@ -63,7 +63,7 @@ _Add some screenshots of the website here for better engagement._
 
 For queries, feel free to reach out to:  
 
-- **Developer**: [Shaurya01836](https://github.com/Shaurya01836)  
+- **Developer**: Dhruv Pancholi 
 
 
 ---
